@@ -1,0 +1,92 @@
+html, body {
+    background: #f2f2f2;
+}
+
+nav.navbar {
+    position: fixed;
+    top: 0;
+    background-color: #337ab5;
+}
+
+.jumbotron {
+    background-color: #337ab7;
+}
+
+.challenge-button {
+    height: 120px;
+
+    border: none;
+    outline: 1px solid rgba(0, 0, 0, .1);
+
+    color: #000;
+    background-color: #fff;
+
+    white-space: pre-line;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+    transform: translate3d(0, 0, 0);
+    transition-property: box-shadow, transform;
+    transition-duration: 400ms;
+    transition-timing-function: cubic-bezier(.16, 1, .29, .99);
+
+
+    transition: .2s all;
+    opacity: .9
+}
+
+.challenge-button:hover {
+    color: #000;
+    background-color: #fff;
+
+    transform: translate3d(0, -4px, 0) translateY(-10px);
+    box-shadow: 0 12px 30px 0 rgba(0, 0, 0, .2);
+    transition-property: box-shadow, transform;
+    transition-duration: 600ms;
+    transition-timing-function: cubic-bezier(.16, 1, .29, .99);
+    opacity: 1;
+    -webkit-animation: move 300ms cubic-bezier(.3, .6, .3, .9) forwards;
+}
+
+.challenge-button:focus {
+    box-shadow: none;
+
+    outline: 1px solid rgba(0, 0, 0, .1);
+
+    color: #000;
+    background-color: #fff;
+}
+
+.challenge-button:active {
+    color: #000;
+    background-color: #fff;
+}
+
+.solved-challenge {
+    color: #fff;
+}
+
+.solved-challenge:hover {
+    color: #fff;
+}
+
+.solved-challenge:focus {
+    color: #fff;
+}
+
+.solved-challenge:active {
+    color: #fff;
+}
+
+@keyframes move {
+    0% {
+        transform: perspective(1000px) rotateX(0) rotateY(0) translateZ(0)
+    }
+
+    20% {
+        transform: perspective(1000px) rotateX(10deg) rotateY(5deg) translateZ(20px)
+    }
+
+    100% {
+        transform: perspective(1000px) rotateX(0) rotateY(0) translateZ(70px)
+    }
+}
